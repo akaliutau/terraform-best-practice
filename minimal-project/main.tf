@@ -10,6 +10,7 @@ data "aws_ami" "ubuntu" {
     values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
   }
 
+  owners = []
 }
 
 data "local_file" "ssh-access-key" {
@@ -17,7 +18,7 @@ data "local_file" "ssh-access-key" {
 }
 
 resource "aws_key_pair" "ssh-key" {
-  key_name   = "ssh-key" # must match the filename!
+  key_name   = "ssh-key"
   public_key = data.local_file.ssh-access-key.content
 }
 

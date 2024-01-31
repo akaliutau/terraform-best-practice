@@ -36,3 +36,5 @@ Things to remember:
 
 # Projects
 
+`minimal-project` - creates a small VPC with 1 t2.micro instance accessible via SSH - can be handy in case a VM machine
+is needed to quickly perform some compute-intense experiments  (VM can have TBs of memory)
