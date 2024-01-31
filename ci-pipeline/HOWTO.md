@@ -20,6 +20,9 @@ Key concepts illustrated:
 
 # Running
 
+The first step will be to create a test repo specified in `source_code_repo` variable (terraform.tfvars file) and
+authorise 
+
 ```shell
 terraform --version
 cd ci-pipeline/
@@ -28,3 +31,5 @@ terraform plan
 terraform apply -y
 terraform show
 ```
+
+

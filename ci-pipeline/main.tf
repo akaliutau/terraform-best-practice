@@ -39,7 +39,7 @@ module "codepipeline" {
   source_code_repo = var.source_code_repo
 
   environment      = {
-    CONFIRM_DESTROY = 1
+    DESTROY = 0
   }
 
   s3_backend_config = module.s3-terraform-backend.config

@@ -6,7 +6,7 @@ phases:
        - echo $BACKEND >> backend.tf.json
        - terraform init
        - |
-         if [[ "$CONFIRM_DESTROY" == "0" ]]; then
+         if [[ "$DESTROY" == "0" ]]; then
            terraform apply -auto-approve
          else
            terraform destroy -auto-approve
