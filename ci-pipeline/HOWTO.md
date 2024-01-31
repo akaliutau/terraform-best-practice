@@ -21,14 +21,18 @@ Key concepts illustrated:
 # Running
 
 The first step will be to create a test repo specified in `source_code_repo` variable (terraform.tfvars file) and
-authorise 
+authorise AWS to read/write/control GitHub repository with source code ([fig01-1](./pictures/fig01-1.png) 
+and  [fig01-2](./pictures/fig01-2.png) )
+
+For running Terraform in the cloud as a part of CloudPipeline the S3 storage is needed (to store the source code and
+the TF state)
 
 ```shell
 terraform --version
 cd ci-pipeline/
 terraform init -upgrade
 terraform plan
-terraform apply -y
+terraform apply
 terraform show
 ```
 
