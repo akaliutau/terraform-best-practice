@@ -1,4 +1,6 @@
-# terraform-best-practice
+# Terraform best practice
+
+This repository contains overview of Terraform IaaC tool and sample designs for a couple of use cases demonstrating how to apply TF to solve DevOps problems 
 
 # Prerequisites
 
@@ -37,4 +39,14 @@ Things to remember:
 # Projects
 
 `minimal-project` - creates a small VPC with 1 t2.micro instance accessible via SSH - can be handy in case a VM machine
-is needed to quickly perform some compute-intense experiments  (VM can have TBs of memory)
+is needed to quickly perform some compute-intense experiments  (VM can have TBs of memory). More details [here](./minimal-project/HOWTO.md)
+
+`ci-pipeline` - shows how to define in code AWS-cloud native pipeline which in its turn can use Terraform to deploy infrastructure (cascading IaaC). 
+More details [here](./ci-pipeline/HOWTO.md)
+
+`multi-tier-webapp` - 3-tier project in React + Go - TBA
+
+
+# Terraform notes
+
+TBA
