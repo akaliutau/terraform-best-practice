@@ -37,19 +37,12 @@ There is a `Local provider` for Terraform, which allows to create and manage tex
 
 # HCL
 
-Input variables parameterize Terraform configurations. Local values save the
+* Input variables parameterize Terraform configurations. Local values save the results of an expression. 
+  Output values pass data around, either back to the user or to other modules.
+* `for` expressions allow to transform one complex type into another( can be combined with other for expressions to create higher-order functions)
+* don't use legacy functions such as uuid() and timestamp()
+* Zip files with the Archive provider. You may need to specify an explicit dependency to ensure that the data source runs at the right time.
+* `templatefile()` can be used with template files
+* The `count` meta argument can dynamically provision multiple instances of a resource (use bracket notation [] for elems access)
 
-results of an expression. Output values pass data around, either back to the user
-or to other modules.
-for expressions allow you to transform one complex type into another. They
-can be combined with other for expressions to create higher-order functions.
-Randomness must be constrained. Avoid using legacy functions such as uuid()
-and timestamp() , as these will introduce subtle bugs in Terraform due to a
-non-convergent state.
-Zip files with the Archive provider. You may need to specify an explicit depen-
-dency to ensure that the data source runs at the right time.
-templatefile() can template files with the same syntax used by interpolation
-variables. Only variables passed to this function are in scope for templating.
-The count meta argument can dynamically provision multiple instances of a
-resource. To access an instance of a resource created with count , use bracket
-notation [] .
+
