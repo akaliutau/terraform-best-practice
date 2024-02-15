@@ -49,4 +49,4 @@ More details [here](./ci-pipeline/HOWTO.md)
 
 # Terraform notes
 
-TBA
+General notes, philosophy and misc topics can be found [here](./notes/concepts.md)
